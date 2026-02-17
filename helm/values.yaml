@@ -1,0 +1,6 @@
+image: sud92/grpc-simple:latest
+
+replicas: 2
+
+service:
+  port: 50051
