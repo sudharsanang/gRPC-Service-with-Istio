@@ -7,4 +7,4 @@ Setup gRPC Service with Istio on Kubernetes
 5.Install istio demo profile
 6.Deploy helm chart
 7.Scales the pod for load testing
-8.
+8.use ghz for load test
