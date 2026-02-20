@@ -19,5 +19,15 @@ spec:
   - route:
     - destination:
         host: grpc-echo
-        port:
-          number: 50051
+        subset: v1
+      weight: 50
+    - destination:
+        host: grpc-echo
+        subset: v2
+      weight: 50
+    fault:
+      abort:
+        percentage:
+          value: 50
+        httpStatus: 500
+
