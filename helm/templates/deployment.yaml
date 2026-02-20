@@ -7,7 +7,6 @@ spec:
   selector:
     matchLabels:
       app: grpc-echo
-      version: v1
   template:
     metadata:
       labels:
