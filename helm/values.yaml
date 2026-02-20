@@ -1,4 +1,4 @@
-image: sud92/grpc-simple:latest
+image: grpc-echo:local
 
 replicas: 2
 
