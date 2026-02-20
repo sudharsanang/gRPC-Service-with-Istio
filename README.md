@@ -11,7 +11,7 @@ Setup gRPC Service with Istio on Kubernetes
 8) used ghz for load test
 9) Run a sustained load test to trigger autoscaling
 
-Installation/setup procedures:
+**Installation/setup procedures:**
 1) Installed kind using brew
 2) setup cluster using kind create cluster
 3) Setup istio profile
@@ -27,3 +27,13 @@ Installation/setup procedures:
   --call EchoService.Echo \
   -d '{"message":"hello"}' \
   localhost:50051
+10) perform Load testing with Autoscaling
+    ghz \
+  --insecure \
+  --proto echo.proto \
+  --call echo.EchoService/Echo \
+  -d '{"message":"load"}' \
+  -c 200 \
+  -z 2m \
+  --rps 2000 \
+  <service>:50051
